@@ -35,8 +35,6 @@ public class Main {
         int small = smallCount * 1;
         int bigNum1 = 0;
         int smallNum1 = 0;
-        int tmp1 = 0;
-        int tmp2 = 0;
 
         if(bigCount < 0 || smallCount < 0 || goal < 0){
             return false;
@@ -47,13 +45,13 @@ public class Main {
         }else{
             if(bigCount!=0) {
                 bigNum1 = goal / 5;
-                tmp1 = goal - (5 * bigNum1);
+                smallNum1 = goal - (5 * bigNum1);
             }
 
-            if(tmp1 == 0){
+            if(smallNum1 == 0){
                 return true;
             }else{
-                if(tmp1 <= smallCount){
+                if(smallNum1 <= smallCount){
                     return true;
                 }
             }
