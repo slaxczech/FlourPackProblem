@@ -31,8 +31,9 @@ public class Main {
     }
 
     public static boolean canPack(int bigCount, int smallCount, int goal){
-        int big = bigCount * 5;
-        int small = smallCount * 1;
+        int bigValue = 5;
+        int big = bigCount * bigValue;
+        int small = smallCount;
         int bigNum1 = 0;
         int smallNum1 = 0;
 
@@ -44,8 +45,8 @@ public class Main {
             return false;
         }else{
             if(bigCount!=0) {
-                bigNum1 = goal / 5;
-                smallNum1 = goal - (5 * bigNum1);
+                bigNum1 = goal / bigValue;
+                smallNum1 = goal - (bigValue * bigNum1);
             }
 
             if(smallNum1 == 0){
